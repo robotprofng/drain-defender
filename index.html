@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>DRAIN DEFENDERS</title>
+  <style>
+  body {
+    background-color: #d4f5ef;
+    font-family: Arial, Sans-serif;
+  }
+  
+  header {
+    background-color: #056674;
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  section {
+    padding: 20px;
+    margin: 10px;
+  }
+  
+  h2{
+    color: #056674
+  }
+  
+  img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+  }
+  
+  a {
+    color: #056674
+  }
+  
+  a:hover {
+    text-decoration:  underline;
+    color: black;
+  }
+  
+  ul, ol {
+    margin-left: 30px;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 15px;
+  }
+  
+  th, td {
+    border: 2px solid #056674;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th, td {
+    background-color: #056674;
+    color: white;
+  }
+  
+  form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #056674;
+    border-radius: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #056674;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #04475a;
+  }
+  
+  footer {
+    background-color: #056674;
+    padding: 10px;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>DRAIN DEFENDERS</h1>
+    <hr>
+    <h3>A website proudly created by brilliant kids on a mission to keep drains clean and protect Nigeria from flooding!</h3>
+  </header>
+  
+  <section style= "text-align: center;">
+    <img src="/sdcard/Download/drain def.jpeg" alt="Floods caused by plastic waste">
+    <p>Learn more via <a href= "https://www.unep.org/">UNITED NATIONS</a>     </p>
+  </section>
+  
+  <section>
+    <h2>OUR GOALS</h2>
+    <ul>
+      <li>Clean and protect drainage systems</li>
+      <li>Teach kids about safe waste disposal</li>
+      <li>Work together to stop flooding</li>
+    </ul>
+  </section>
+  
+  <section>
+    <h2>STEPS TO HELP PREVENT FLOODING</h2>
+    <ol>
+      <li>Never throw waste in drains or streets</li>
+      <li>Report blocked drains in your community </li>
+      <li>Join or organize community cleanup days </li>
+    </ol>
+  </section>
+  
+  <section>
+    <h2>FLOODING IMPACTS IN NIGERIA</h2>
+    <table border="10" cell padding="10">
+    <tr>
+      <th>LOCATION</th>
+      <th>DEATHS</th>
+      <th>PEOPLE DISPLACED</th>
+      <th>HOMES DESTROYED</th>
+    </tr>
+    
+    <tr>
+      <td>Mokwa, Niger state</td>
+      <td>151 lives lost</td>
+      <td>3,000+</td>
+      <td>500+ homes</td>
+    </tr>
+    </table> 
+  </section>
+  
+  <section>
+    <hr>
+    <h2>REPORT A BLOCKED DRAIN/SHARE YOUR IDEAS</h2>
+    <form>
+      <label for="name">YOUR NAME:</label>
+      <input type="text" id="name" required
+        
+        <label for="location">DRAIN LOCATION:</label>
+        <input type="text" id="location" required 
+          
+          <label for="idea">YOUR MESSAGE/FEEDBACK/IDEA:</label>
+          <textarea id="idea" rows="4" placeholder="Tell us your idea"></textarea>
+          
+          <button type="submit">SEND</button>
+    </form>
+  </section>
+
+<section id="quiz">
+  <hr>
+  <h2>🧠 QUIZ TIME: TEST YOUR KNOWLEDGE</h2>
+
+  <div id="quiz1">
+    <p>1. What should you NEVER pour down the drain?</p>
+    <button onclick="checkAnswer('quiz1', 'sewage')">Sewage</button>
+    <button onclick="checkAnswer('quiz1', 'water')">Clean water</button>
+    <p id="result1"></p>
+  </div>
+
+  <div id="quiz2">
+    <p>2. Why is it important to keep drains clear?</p>
+    <button onclick="checkAnswer('quiz2', 'decoration')">To make roads look nicer</button>
+    <button onclick="checkAnswer('quiz2', 'flooding')">To prevent flooding</button>
+    <p id="result2"></p>
+  </div>
+
+  <div id="quiz3">
+    <p>3. What should you do if you see a blocked drain?</p>
+    <button onclick="checkAnswer('quiz3', 'report')">Report it</button>
+    <button onclick="checkAnswer('quiz3', 'ignore')">Ignore it</button>
+    <p id="result3"></p>
+  </div>
+</section>
+
+  <script>
+  function checkAnswer(quizId, choice) {
+  const correctAnswers = {
+    quiz1: 'sewage',
+    quiz2: 'flooding',
+    quiz3: 'report'
+  };
+
+  const result = document.getElementById(`result${quizId.slice(-1)}`);
+  if (choice === correctAnswers[quizId]) {
+    result.textContent = "Correct!";
+    result.style.color = "green";
+  } else {
+    result.textContent = "Try again!";
+    result.style.color = "red";
+  }
+}
+  </script>     
+      
+      
+      <footer style="text-align: center;">
+        <p> © 2025. All rights reserved. Created by Olayinka and Chijindum</p>
+      </footer>
+        
+</body>
+</html>
