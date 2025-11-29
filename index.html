@@ -1,99 +1,185 @@
 <!DOCTYPE html>
-
 <html>
 <head>
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
   <title>DRAIN DEFENDERS</title>
   <style>
   body {
-    background-color: #d4f5ef;
+    background: linear-gradient(135deg, #d4f5ef, #ffffff);
     font-family: Arial, Sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1.5s ease-in-out;
   }
-  
+
+  @keyframes fadeIn {
+    from {opacity: 0;} to {opacity: 1;}
+  }
+
   header {
     background-color: #056674;
     color: white;
-    padding: 20px 10px;
+    padding: 30px 10px;
     text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    animation: slideDown 1s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;} 
+    to {transform: translateY(0); opacity: 1;}
+  }
+
+  div {
+    margin: 70px;
   }
   
   section {
-    padding: 20px;
-    margin: 10px;
+    padding: 30px;
+    margin: 20px;
+    background: white;,
+    border-radius: 15px;
+    transition: transform 0.3s;
   }
-  
+
+  section:hover {
+    transform: scale(1.02);
+  }
+
   h2{
-    color: #056674
+    color: #056674;
   }
-  
+
   img{
     width: 100%;
     max-width: 500px;
     border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.4s;
   }
-  
+
+  img:hover{
+    transform: scale(1.05);
+  }
+
   a {
-    color: #056674
+    color: #056674;
+    font-weight: bold;
+    transition: color 0.3s;
   }
-  
+
   a:hover {
-    text-decoration:  underline;
+    text-decoration: underline;
     color: black;
   }
-  
+
   ul, ol {
     margin-left: 30px;
   }
-  
+
   table {
     width: 100%;
     margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
   }
-  
+
   th, td {
     border: 2px solid #056674;
-    padding: 10px;
+    padding: 12px;
     text-align: center;
-  }
-  
-  th, td {
     background-color: #056674;
     color: white;
   }
-  
+
   form{
     display: flex;
     flex-direction: column;
     max-width: 400px;
     margin: auto;
   }
-  
+
   input, textarea {
     margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #056674;
+    padding: 12px;
+    border: 2px solid #056674;
     border-radius: 10px;
+    transition: box-shadow 0.3s;
   }
-  
+
+  input:focus, textarea:focus {
+    box-shadow: 0 0 8px #056674;
+    outline: none;
+  }
+
   button {
-    padding: 10px;
+    padding: 12px;
     background-color: #056674;
     color: white;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
   }
-  
+
   button:hover {
     background-color: #04475a;
+    transform: scale(1.05);
   }
-  
+
   footer {
     background-color: #056674;
     padding: 10px;
     color: white;
     margin-top: 20px;
+    text-align: center;
   }
-  
+
+ 
+  #quiz button {
+    margin: 5px;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: #078a98;
+    color: white;
+    transition: 0.3s;
+  }
+
+  #quiz button:hover {
+    background: #055a62;
+    transform: scale(1.1);
+  }
+
+  #quiz p[id^="result"] {
+    font-weight: bold;
+    margin-top: 8px;
+  }
+
+    .pop-button {
+      background-color: #00897B;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 5px 15px rgba(106, 13, 173, 0.4);
+      animation: popIn 0.5s ease forwards;
+    }
+
+    .pop-button:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 20px rgba(106, 13, 173, 0.6);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
   </style>
 </head>
 
@@ -105,9 +191,22 @@
   </header>
   
   <section style= "text-align: center;">
-    <img src="drain def.jpeg" alt="Floods caused by plastic waste">
+    <img src="/sdcard/Download/drain def.jpeg" alt="Floods caused by plastic waste">
     <p>Learn more via <a href= "https://www.unep.org/">UNITED NATIONS</a>     </p>
   </section>
+  
+  <div style="text-align: center";>
+    <h2>MEET THE DRAIN DEFENDERS</h2>
+    <a href="about-chijindum.html">
+    <button class="pop-button">Meet Chijindum</button>
+  </a>
+    
+    <a href="about-olayinka.html">
+    <button class="pop-button">Meet Olayinka</button>
+  </a>
+    
+    
+  </div>
   
   <section>
     <h2>OUR GOALS</h2>
@@ -128,6 +227,7 @@
   </section>
   
   <section>
+    <img src="/sdcard/Download/flood-effects.jpeg">
     <h2>FLOODING IMPACTS IN NIGERIA</h2>
     <table border="10" cell padding="10">
     <tr>
@@ -146,27 +246,28 @@
     </table> 
   </section>
   
-  <section>
-    <hr>
+  <div>
     <h2>REPORT A BLOCKED DRAIN/SHARE YOUR IDEAS</h2>
+    <hr>
     <form>
       <label for="name">YOUR NAME:</label>
-      <input type="text" id="name" required
+      <input type="text" id="name" required>
         
-        <label for="location">DRAIN LOCATION:</label>
-        <input type="text" id="location" required 
+      <label for="location">DRAIN LOCATION:</label>
+      <input type="text" id="location" required>
           
-          <label for="idea">YOUR MESSAGE/FEEDBACK/IDEA:</label>
-          <textarea id="idea" rows="4" placeholder="Tell us your idea"></textarea>
+      <label for="idea">YOUR MESSAGE/FEEDBACK/IDEA:</label>
+      <textarea id="idea" rows="4" placeholder="Tell us your idea"></textarea>
           
-          <button type="submit">SEND</button>
+      <button type="submit">SEND</button>
     </form>
-  </section>
+  </div>
 
 <section id="quiz">
-  <hr>
+  
   <h2>🧠 QUIZ TIME: TEST YOUR KNOWLEDGE</h2>
-
+  <hr>
+  <img src="/sdcard/Download/flood-quiz.jpg">
   <div id="quiz1">
     <p>1. What should you NEVER pour down the drain?</p>
     <button onclick="checkAnswer('quiz1', 'sewage')">Sewage</button>
@@ -215,3 +316,11 @@
         
 </body>
 </html>
+
+
+
+
+
+
+  
+    
