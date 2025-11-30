@@ -3,20 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chijindum</title>
-</head>
-<body style="background-color: green;">
-  <section style="text-align: center;">
-  <h1>MEET CHIJINDUM IKEYI</h1>
-  </section>
-<IMG> </IMG>
-<hr>
-<section style="text-align: center;">
- <img src="chijindum.jpg"
-</section>
-<hr>
-
-<style>
+    <title>About Chijindum</title>
+   <style>
   
       body{
 background-color: #d4f5ef;
@@ -32,8 +20,12 @@ font-family: Arial, Sans-serif;
         padding: 20px;
         margin: 10px;
       }
-      h2{
-        color: #056674;
+      h2, h1{
+        color: white;
+      }
+  
+      p{
+        color: white;
       }
 
       img{
@@ -53,8 +45,10 @@ font-family: Arial, Sans-serif;
 
       ul, ol{
         margin-left: 30px;
+        color: white;
       }
 
+  
       form{
         display: flex;
         flex-direction: column;
@@ -88,6 +82,20 @@ font-family: Arial, Sans-serif;
         margin-top: 20px;
       }
 </style>
+</head>
+
+<body style="background-color: green;">
+  <section style="text-align: center;">
+  <h1>MEET CHIJINDUM IKEYI</h1>
+  </section>
+  
+
+<hr>
+<section style="text-align: center;">
+ <img src="chijindum.jpg">
+</section>
+<hr>
+
 <section>
   <h2>Name: Chijindum Ikeyi.</h2>
   <h2>Age: 9yrs old.</h2>
@@ -112,86 +120,92 @@ font-family: Arial, Sans-serif;
   <h2>I am a strong and bold person.</h2>
   <h2>I like myself because God made me special.</h2>
   </section>
-  <hr>
+  
+  
   <section>
+    <hr>
   <h1>My goals in life</h1>
   <ul>
   <li>I want to be who God wants me to be.</li>
-    <li>I want to be a big person like my ancestors.</li>
-    <li>I want to be a saint because without me the saints are not complete.</li>
-   </ul>
-
+  <li>I want to be a big person like my ancestors.</li>
+  <li>I want to be a saint because without me the saints are not complete.</li>
+  </ul>
+  </section>
+  
+  <section>
    <hr>
-   <h1>Why I love for education</h1>
-<ol>
-<li>"Self-belief and hardwork will always earn you success,"And that is what I believe.</li>
-<li>I want to be a priest so I need to have knowledge.</li>
-<li>I want to be someone in the future.</li>
-</ol>
- </section>
+   <h1>Why I love education</h1>
+  <ol>
+  <li>Self-belief and hardwork will always earn you success, and that is what I believe.</li>
+  <li>I want to be a priest so I need to have knowledge.</li>
+  <li>I want to be someone in the future.</li>
+  </ol>
+   </section>
  
  <section>
  <hr>
-<h2>WHAT ABOUT YOU\SHARE YOUR IDEAS!</h2>
+<h2>REACH OUT TO ME</h2>
 <form>
     <label for="name">YOUR NAME:</label>
     <input type="text" id="name" required>
 
-     <label for="location">YOUR LOCATION:</label>
+     <label for="location">YOUR NUMBER:</label>
     <input type="text" id="location" required>
 
-      <label for="composition">YOUR COMPOSITION:</label>
-    <textarea id="composition" rows="15" placeholder="Tell me your composition...."></textarea>
+      <label for="composition">COMPOSE MESSAGE:</label>
+    <textarea id="composition" rows="15" placeholder="Tell me about you..."></textarea>
 
 
-    <button type="submit">SEND/SUBBIT</button>
+    <button type="submit">SEND/SUBMIT</button>
     </form>
 </section>
 
-<hr>
-<section id="quiz">
-<h2>TEST YOUR KNOWLEDGE!</h2>
-<div id="quiz1">
-<p>1. What is my name?</p>
- ><button onclick="checkAnswer('quiz1', 'Chijindum')">CHIJINDUM</button>
-          <button onclick="checkAnswer('quiz1', 'Ebube')">EBUBE</button>
-          <p id="result1"></p>
-</div>
+  <section id="quiz">
+  
+  <h2>🧠 QUIZ: HOW WELL DO YOU KNOW ME?</h2>
+  <hr>
+  <div id="quiz1">
+    <p>1. What is my name?</p>
+    <button onclick="checkAnswer('quiz1', 'chijindum')">CHIJINDUM</button>
+    <button onclick="checkAnswer('quiz1', 'ebube')">EBUBE</button>
+    <p id="result1"></p>
+  </div>
 
-<div id="quiz2">
-<p>2. Where do I live?</p>
- ><button onclick="checkAnswer('quiz1', 'Enugu')">ENUGU</button>
-          <button onclick="checkAnswer('quiz1', 'Lagos')">LAGOS</button>
-          <p id="result2"></p>
-</div>
+  <div id="quiz2">
+    <p>2. Where do I live?</p>
+    <button onclick="checkAnswer('quiz2', 'lagos')">LAGOS</button>
+    <button onclick="checkAnswer('quiz2', 'enugu')">ENUGU</button>
+    <p id="result2"></p>
+  </div>
 
-<div id="quiz3">
-<p>3. What is my best food?</p>
- ><button onclick="checkAnswer('quiz1', 'Beans')">BEANS</button>
-          <button onclick="checkAnswer('quiz1', 'Noodles')">NOODLES</button>
-          <p id="result3"></p>
+  <div id="quiz3">
+    <p>3. What is my best food?</p>
+    <button onclick="checkAnswer('quiz3', 'beans')">BEANS</button>
+    <button onclick="checkAnswer('quiz3', 'noodles')">NOODLES</button>
+    <p id="result3"></p>
+  </div>
 </section>
 
- <script>
+  <script>
   function checkAnswer(quizId, choice) {
   const correctAnswers = {
-    quiz1: 'Chijindum',
-    quiz2: 'Enugu',
-    quiz3: 'Noodles'
+    quiz1: 'chijindum',
+    quiz2: 'enugu',
+    quiz3: 'noodles'
   };
 
-  const result = document.getElementById(result${quizId.slice(-1)});
+  const result = document.getElementById(`result${quizId.slice(-1)}`);
   if (choice === correctAnswers[quizId]) {
     result.textContent = "Correct!";
-    result.style.color = "green";
+    result.style.color = "white";
   } else {
     result.textContent = "Try again!";
     result.style.color = "red";
-    }
   }
-      </script>
-<hr>
-
+}
+  </script>     
+      
+  
 <footer style="text-align: center;">
 <p> @ 2025. All rights reserved. Created by Chijindum Ikeyi.</p>
 </footer>
@@ -199,4 +213,12 @@ font-family: Arial, Sans-serif;
 </html>
 
 
-    
+
+
+
+
+
+
+
+
+      
